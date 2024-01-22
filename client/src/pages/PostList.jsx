@@ -3,7 +3,6 @@ import { getPosts } from "../api/posts";
 
 const PostList = () => {
 	const posts = useLoaderData();
-	console.log(posts);
 	return (
 		<>
 			<h1 className="page-title">Posts</h1>
