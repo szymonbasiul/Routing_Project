@@ -5,7 +5,8 @@ import { userListRoute } from "./pages/UserList";
 import { todoListRoute } from "./pages/TodosList";
 import { postRoute } from "./pages/Post";
 import { userRoute } from "./pages/User";
-import { NewTodo } from "./pages/NewTodo";
+import { newTodoRoute } from "./pages/NewTodo";
+import { newPostRoute } from "./pages/NewPost";
 
 export const router = createBrowserRouter([
 	{
@@ -24,6 +25,7 @@ export const router = createBrowserRouter([
 								...postListRoute,
 							},
 							{ path: ":postId", ...postRoute },
+							{ path: "new", ...newPostRoute },
 						],
 					},
 					{
@@ -44,9 +46,9 @@ export const router = createBrowserRouter([
 								...todoListRoute,
 							},
 							{ path: ":todoId", element: <h1>Todo Element</h1> },
+							{ path: "new", ...newTodoRoute },
 						],
 					},
-					{ path: "new", element: <NewTodo /> },
 					{ path: "*", element: <h1>404 - Page not found</h1> },
 				],
 			},

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export const NewTodo = () => {
+const NewTodo = () => {
 	return (
 		<>
 			<div className="container">
@@ -22,4 +22,8 @@ export const NewTodo = () => {
 			</div>
 		</>
 	);
+};
+
+export const newTodoRoute = {
+	element: <NewTodo />,
 };
